@@ -50,6 +50,11 @@ struct RootFeature {
                 state.tapState = TabbarCoordinator.State.initState
                 state.ifFirst = false
                 return .none
+                
+            case .tapAction(.homeAction(.returnFirstCatch)):
+                state.ifFirst = true
+                return .none
+                
             default :
                 break
             }

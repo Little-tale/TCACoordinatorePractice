@@ -14,7 +14,18 @@ struct HomeView: View {
     
     var body: some View {
         WithPerceptionTracking {
-            Text("홈이에요!")
+            VStack {
+                Text("홈이에요!")
+                
+                Button("처음으로 돌아가기") {
+                    store.send(.returnFirst)
+                }
+                .background(.red)
+                Button("다음으로 넘어가 보기") {
+                    
+                }
+                .background(.green)
+            }
         }
     }
 }

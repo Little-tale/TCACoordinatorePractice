@@ -31,12 +31,17 @@ struct HomeTapCoordinatorFeature {
 //    
     enum Action {
         case router(IdentifiedRouterActionOf<TapCoordinatorScreens>)
+        case returnFirstCatch
     }
 //    
     var body: some ReducerOf<Self> {
         
         Reduce { state, action in
             switch action {
+            case .router(.routeAction(id: _, action: .home(.returnFirst))) :
+                return .run { send in
+                    await send(.returnFirstCatch)
+                }
                 
             default :
                 break
