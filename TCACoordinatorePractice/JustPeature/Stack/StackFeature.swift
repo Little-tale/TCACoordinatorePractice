@@ -27,6 +27,7 @@ struct StackFeature {
         case next3View
         case next1View
         case goFirstStack
+        case goBack
     }
     
 }

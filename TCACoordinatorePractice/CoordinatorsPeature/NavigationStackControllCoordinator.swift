@@ -103,6 +103,16 @@ struct NavigationStackControllCoordinator {
                 return .routeWithDelaysIfUnsupported(state.routes, action: \.router, scheduler: .main) { $0.goBackToRoot() }
                 // 해당 방법으로도 같은 이슈가 발생합니다.
                 
+            case .router(.routeAction(id: _, action: .stack1(.goBack))):
+                
+                // 만약 아무것도 없는 스택에서 고백을 하게 되면 탭이 사라집니다.
+//                state.routes.goBack()
+                
+                // 해당하는 방법처럼 특정한 상황에선 대응해 주어야 합니다.
+                if state.routes.elements.count > 1 {
+                    state.routes.goBack()
+                }
+                
             default:
                 break
             }

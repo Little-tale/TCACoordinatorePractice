@@ -26,6 +26,18 @@ struct Stack1View: View {
             Button("첫번째 뷰로가기") {
                 store.send(.next1View)
             }
+            Button {
+                store.send(.goBack)
+            } label: {
+                Text("뒤로가기 버튼 따라할래")
+                    .bold()
+                    .background(.gray)
+                    .foregroundStyle(.red)
+                Image(systemName: "star")
+                    .resizable()
+                    .frame(width: 100,height: 40)
+                    
+            }
         }
         .navigationTitle("첫번쨰 스택이였던곳.")
         .navigationBarTitleDisplayMode(.inline)
