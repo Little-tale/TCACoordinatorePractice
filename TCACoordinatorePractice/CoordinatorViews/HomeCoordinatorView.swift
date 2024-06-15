@@ -7,14 +7,20 @@
 
 import SwiftUI
 import ComposableArchitecture
+import TCACoordinators
 
 struct HomeCoordinatorView: View {
     
     @Perception.Bindable var store: StoreOf<HomeTapCoordinatorFeature>
     
     var body: some View {
-        VStack {
-            
+        WithPerceptionTracking {
+            TCARouter(store.scope(state: \.routes, action: \.router)) { screen in
+                switch screen.case {
+                case let .home(store):
+                    HomeView(store: store)
+                }
+            }
         }
     }
 }
