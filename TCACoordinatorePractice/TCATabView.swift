@@ -7,15 +7,21 @@
 
 import SwiftUI
 import ComposableArchitecture
+import TCACoordinators
 
 struct TCATabView: View {
     
-    @Perception.Bindable var store: StoreOf<TapCoordinatorFeature>
+    @Perception.Bindable var store: StoreOf<TabbarCoordinator>
     
     var body: some View {
         WithPerceptionTracking {
-            VStack {
-                Text("곧 탭뷰 달꺼임!")
+            TabView(selection: $store.seletedTab.sending(\.tabSelected)) {
+                
+                /// HOME
+                HomeCoordinatorView(store: store.scope(state: \.homeState, action: \.homeAction))
+                    .tabItem { Text("HOME") }
+                    .tag(TabbarCoordinator.Tab.home)
+                
             }
         }
     }

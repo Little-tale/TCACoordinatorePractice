@@ -1,15 +1,16 @@
 //
-//  SplashVIew.swift
+//  SplashsView.swift
 //  TCACoordinatorePractice
 //
 //  Created by Jae hyung Kim on 6/15/24.
 //
 
+import Foundation
 import SwiftUI
 import ComposableArchitecture
 
 /// 구분을 위해서 색을 주었습니다!
-struct SplashView: View {
+struct SplashsView: View {
     
     @Perception.Bindable var store: StoreOf<SplashPeature>
     

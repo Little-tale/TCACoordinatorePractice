@@ -11,35 +11,40 @@ import TCACoordinators
 
 
 @Reducer
-struct TapCoordinatorFeature {
+struct HomeTapCoordinatorFeature {
     
-//    @Reducer(state: .equatable)
-//    enum TapCoordinatorScreens {
-//        case home(HomeFeature)
-//    }
+    @Reducer(state: .equatable)
+    enum TapCoordinatorScreens {
+        case home(HomeFeature)
+    }
 //    
-//    @ObservableState
-//    struct State: Equatable {
-//        
-//        var routes: IdentifiedArrayOf<Route<TapCoordinatorScreens.State>>
-//    }
+    @ObservableState
+    struct State: Equatable {
+        
+        static let initalState = State(
+            routes: [.root(.home(HomeFeature.State()), embedInNavigationView: false)]
+        )
+        
+        var routes: IdentifiedArrayOf<Route<TapCoordinatorScreens.State>>
+        
+    }
 //    
-//    enum Action {
-//        case router(IdentifiedRouterActionOf<TapCoordinatorScreens>)
-//    }
+    enum Action {
+        case router(IdentifiedRouterActionOf<TapCoordinatorScreens>)
+    }
 //    
-//    var body: some ReducerOf<Self> {
-//        
-//        Reduce { state, action in
-//            switch action {
-//                
-//            default :
-//                break
-//            }
-//            
-//            return .none
-//        }
-//        .forEachRoute(\.routes, action: \.router)
-//    }
+    var body: some ReducerOf<Self> {
+        
+        Reduce { state, action in
+            switch action {
+                
+            default :
+                break
+            }
+            
+            return .none
+        }
+        .forEachRoute(\.routes, action: \.router)
+    }
     
 }

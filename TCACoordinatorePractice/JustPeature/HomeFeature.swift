@@ -17,16 +17,21 @@ struct HomeFeature {
     }
     
     enum Action {
-        
+        case returnFirst
     }
     
     var body: some ReducerOf<Self> {
         
         Reduce { state, action in
             
-            
-            
-            
+            switch action {
+             
+            case .returnFirst: // 상위 뷰가 관찰 해보죠
+                return .none
+                
+            default:
+                break
+            }
             return .none
         }
         

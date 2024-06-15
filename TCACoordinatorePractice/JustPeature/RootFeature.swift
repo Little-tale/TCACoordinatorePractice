@@ -16,13 +16,16 @@ struct RootFeature {
     struct State {
         var ifFirst: Bool = true
         var splashState = SplashPeature.State() // 보통은 ? 를 통해 If Let Sctore를 사용하세요
-        //var tapState = TapCoordinatorFeature.State(routes: [.root((.home(HomeFeature.State())), embedInNavigationView: true)])
+        
+        // 이때가 원인임. 왜일까 
+//        var tapState = TapCoordinatorFeature.State(routes: [.root(.home(HomeFeature.State()), embedInNavigationView: false)])
+        var tapState: TabbarCoordinator.State?
     }
     
     enum Action: BindableAction {
         case binding(BindingAction<State>)
         case splashAction(SplashPeature.Action)
-        //case tapAction(TapCoordinatorFeature.Action)
+        case tapAction(TabbarCoordinator.Action)
     }
     
     var body: some ReducerOf<Self> {
@@ -33,7 +36,7 @@ struct RootFeature {
             SplashPeature()
         }
         
-        // Tap Coordinator의 store를 감시 하겠습니다.
+//         Tap Coordinator의 store를 감시 하겠습니다.
 //        Scope(state: \.tapState, action: \.tapAction) {
 //            TapCoordinatorFeature()
 //        }
@@ -44,14 +47,17 @@ struct RootFeature {
                 
                 // 하위뷰의 액션을 관찰합니다.
             case .splashAction(.startButtonTapped):
+                state.tapState = TabbarCoordinator.State.initState
                 state.ifFirst = false
-                
                 return .none
             default :
                 break
             }
             
             return .none
+        }
+        .ifLet(\.tapState, action: \.tapAction) {
+            TabbarCoordinator()
         }
     }
 }
