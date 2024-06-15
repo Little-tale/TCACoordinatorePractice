@@ -84,6 +84,25 @@ struct NavigationStackControllCoordinator {
             case .router(.routeAction(id: _, action: .stack3(.next1View))):
                 state.routes.push(.stack1(StackFeature.State()))
                 
+                // 처음스택으로 돌아갑니다.
+            case .router(.routeAction(id: _, action: .stack3(.goFirstStack))):
+                
+                // state.routes.goBackToRoot() // 이렇게만 해놓으면
+                /*
+                 Trying to pop to a missing destination - SwiftUI/NavigationBridge_PhoneTV.swift:213 - please file a bug report. 라는 이슈가 나옵니다.
+                 */
+                /*
+                return .routeWithDelaysIfUnsupported(state.routes, action: \.router) { $0.goBackToRoot() }
+                 */
+                
+                /*
+                 해당 하는 방법으로도
+                 Trying to pop to a missing destination - SwiftUI/NavigationBridge_PhoneTV.swift:213 - please file a bug report. 라는 이슈가 나옵니다.
+                 */
+                
+                return .routeWithDelaysIfUnsupported(state.routes, action: \.router, scheduler: .main) { $0.goBackToRoot() }
+                // 해당 방법으로도 같은 이슈가 발생합니다.
+                
             default:
                 break
             }

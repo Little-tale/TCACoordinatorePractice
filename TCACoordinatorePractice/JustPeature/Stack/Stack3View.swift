@@ -8,6 +8,9 @@
 import SwiftUI
 import ComposableArchitecture
 
+/*
+ 해당뷰에서만 한번 처음스택으로 돌아가 보기 버튼을 만든후 이용해 보겠습니다.
+ */
 struct Stack3View: View {
     
     @Perception.Bindable var store: StoreOf<StackFeature>
@@ -25,6 +28,9 @@ struct Stack3View: View {
             }
             Button("첫번째 뷰로가기") {
                 store.send(.next1View)
+            }
+            Button("첫번째 스택으로 돌아가보자!") {
+                store.send(.goFirstStack)
             }
         }
         .navigationTitle("세번쨰 스택이였던곳.")
