@@ -17,7 +17,6 @@
 		7B26D1BE2C1D5CF300BC9912 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B26D1BD2C1D5CF300BC9912 /* SplashView.swift */; };
 		7B26D1C02C1D5D6900BC9912 /* SplashPeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B26D1BF2C1D5D6900BC9912 /* SplashPeature.swift */; };
 		7B26D1C22C1D625400BC9912 /* TapCoordinatorFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B26D1C12C1D625400BC9912 /* TapCoordinatorFeature.swift */; };
-		7B26D1C52C1D62B800BC9912 /* TapCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B26D1C42C1D62B800BC9912 /* TapCoordinatorView.swift */; };
 		7B26D1C72C1D632200BC9912 /* ExScreens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B26D1C62C1D632200BC9912 /* ExScreens.swift */; };
 		7B26D1C92C1D637E00BC9912 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B26D1C82C1D637E00BC9912 /* HomeView.swift */; };
 		7B26D1CB2C1D63B500BC9912 /* HomeFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B26D1CA2C1D63B500BC9912 /* HomeFeature.swift */; };
@@ -34,7 +33,6 @@
 		7B26D1BD2C1D5CF300BC9912 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		7B26D1BF2C1D5D6900BC9912 /* SplashPeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPeature.swift; sourceTree = "<group>"; };
 		7B26D1C12C1D625400BC9912 /* TapCoordinatorFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapCoordinatorFeature.swift; sourceTree = "<group>"; };
-		7B26D1C42C1D62B800BC9912 /* TapCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapCoordinatorView.swift; sourceTree = "<group>"; };
 		7B26D1C62C1D632200BC9912 /* ExScreens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExScreens.swift; sourceTree = "<group>"; };
 		7B26D1C82C1D637E00BC9912 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		7B26D1CA2C1D63B500BC9912 /* HomeFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFeature.swift; sourceTree = "<group>"; };
@@ -117,7 +115,6 @@
 		7B26D1C32C1D62AA00BC9912 /* CoordinatorViews */ = {
 			isa = PBXGroup;
 			children = (
-				7B26D1C42C1D62B800BC9912 /* TapCoordinatorView.swift */,
 			);
 			path = CoordinatorViews;
 			sourceTree = "<group>";
@@ -207,7 +204,6 @@
 				7B26D1CD2C1D676D00BC9912 /* TCATabView.swift in Sources */,
 				7B26D1C72C1D632200BC9912 /* ExScreens.swift in Sources */,
 				7B26D1C22C1D625400BC9912 /* TapCoordinatorFeature.swift in Sources */,
-				7B26D1C52C1D62B800BC9912 /* TapCoordinatorView.swift in Sources */,
 				7B26D1BC2C1D5AEA00BC9912 /* RootFeature.swift in Sources */,
 				7B26D1A42C1D593A00BC9912 /* TCACoordinatorePracticeApp.swift in Sources */,
 				7B26D1C02C1D5D6900BC9912 /* SplashPeature.swift in Sources */,

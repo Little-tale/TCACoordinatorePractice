@@ -7,13 +7,13 @@
 
 import Foundation
 
-extension TapCoordinatorFeature.TapCoordinatorScreens.State: Identifiable {
-    
-    var id: UUID {
-        switch self {
-        case let .home(state):
-            return state.id
-        }
-    }
-    
-}
+//extension TapCoordinatorFeature.TapCoordinatorScreens.State: Identifiable {
+//    
+//    var id: UUID {
+//        switch self {
+//        case let .home(state):
+//            return state.id
+//        }
+//    }
+//    
+//}

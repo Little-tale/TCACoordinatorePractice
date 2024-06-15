@@ -16,13 +16,13 @@ struct RootFeature {
     struct State {
         var ifFirst: Bool = true
         var splashState = SplashPeature.State() // 보통은 ? 를 통해 If Let Sctore를 사용하세요
-        var tapState = TapCoordinatorFeature.State(routes: [.root((.home(HomeFeature.State())), embedInNavigationView: true)])
+        //var tapState = TapCoordinatorFeature.State(routes: [.root((.home(HomeFeature.State())), embedInNavigationView: true)])
     }
     
     enum Action: BindableAction {
         case binding(BindingAction<State>)
         case splashAction(SplashPeature.Action)
-        case tapAction(TapCoordinatorFeature.Action)
+        //case tapAction(TapCoordinatorFeature.Action)
     }
     
     var body: some ReducerOf<Self> {
@@ -34,9 +34,9 @@ struct RootFeature {
         }
         
         // Tap Coordinator의 store를 감시 하겠습니다.
-        Scope(state: \.tapState, action: \.tapAction) {
-            TapCoordinatorFeature()
-        }
+//        Scope(state: \.tapState, action: \.tapAction) {
+//            TapCoordinatorFeature()
+//        }
         
         Reduce { state, action in
             
