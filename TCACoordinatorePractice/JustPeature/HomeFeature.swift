@@ -27,10 +27,10 @@ struct HomeFeature {
             
             switch action {
              
-            case .returnFirst: // 상위 뷰가 관찰 해보죠
+            case .returnFirst: //  최상위 뷰가 관찰 해보죠
                 return .none
                 
-            default:
+            default: // 상위 코디네이터가 nextView 를 관찰 합니다.
                 break
             }
             return .none

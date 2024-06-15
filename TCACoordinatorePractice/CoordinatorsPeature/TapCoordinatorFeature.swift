@@ -42,6 +42,9 @@ struct HomeTapCoordinatorFeature {
                 return .run { send in
                     await send(.returnFirstCatch)
                 }
+            case .router(.routeAction(id: _, action: .home(.nextView))):
+                
+                state.routes.push(.home(HomeFeature.State()))
                 
             default :
                 break

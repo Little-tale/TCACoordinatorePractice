@@ -22,7 +22,7 @@ struct HomeView: View {
                 }
                 .background(.red)
                 Button("다음으로 넘어가 보기") {
-                    
+                    store.send(.nextView)
                 }
                 .background(.green)
             }
