@@ -22,6 +22,10 @@ struct TCATabView: View {
                     .tabItem { Text("HOME") }
                     .tag(TabbarCoordinator.Tab.home)
                 
+                // 네비게이션 스택 코디네이터뷰
+                NavigationStackCoordinatorView(store: store.scope(state: \.navigationStackState, action: \.navigationStackAction))
+                    .tabItem { Text("navi심화") }
+                    .tag(TabbarCoordinator.Tab.navigationControll)
             }
         }
     }

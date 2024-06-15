@@ -23,6 +23,12 @@
 		7B26D1CF2C1D746A00BC9912 /* TabbarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B26D1CE2C1D746A00BC9912 /* TabbarCoordinator.swift */; };
 		7B26D1D12C1D765000BC9912 /* SplashsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B26D1D02C1D765000BC9912 /* SplashsView.swift */; };
 		7B26D1D32C1D797600BC9912 /* HomeCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B26D1D22C1D797600BC9912 /* HomeCoordinatorView.swift */; };
+		7B26D1D52C1D877600BC9912 /* NavigationStackControllCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B26D1D42C1D877600BC9912 /* NavigationStackControllCoordinator.swift */; };
+		7B26D1D82C1D88E600BC9912 /* Stack1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B26D1D72C1D88E600BC9912 /* Stack1View.swift */; };
+		7B26D1DA2C1D88EF00BC9912 /* Stack2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B26D1D92C1D88EF00BC9912 /* Stack2View.swift */; };
+		7B26D1DC2C1D88F400BC9912 /* Stack3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B26D1DB2C1D88F400BC9912 /* Stack3View.swift */; };
+		7B26D1DE2C1D896F00BC9912 /* StackFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B26D1DD2C1D896F00BC9912 /* StackFeature.swift */; };
+		7B26D1E02C1D900300BC9912 /* NavigationStackCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B26D1DF2C1D900300BC9912 /* NavigationStackCoordinatorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +47,12 @@
 		7B26D1CE2C1D746A00BC9912 /* TabbarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarCoordinator.swift; sourceTree = "<group>"; };
 		7B26D1D02C1D765000BC9912 /* SplashsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashsView.swift; sourceTree = "<group>"; };
 		7B26D1D22C1D797600BC9912 /* HomeCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorView.swift; sourceTree = "<group>"; };
+		7B26D1D42C1D877600BC9912 /* NavigationStackControllCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackControllCoordinator.swift; sourceTree = "<group>"; };
+		7B26D1D72C1D88E600BC9912 /* Stack1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack1View.swift; sourceTree = "<group>"; };
+		7B26D1D92C1D88EF00BC9912 /* Stack2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack2View.swift; sourceTree = "<group>"; };
+		7B26D1DB2C1D88F400BC9912 /* Stack3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack3View.swift; sourceTree = "<group>"; };
+		7B26D1DD2C1D896F00BC9912 /* StackFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackFeature.swift; sourceTree = "<group>"; };
+		7B26D1DF2C1D900300BC9912 /* NavigationStackCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackCoordinatorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +113,7 @@
 		7B26D1B92C1D5ABC00BC9912 /* JustPeature */ = {
 			isa = PBXGroup;
 			children = (
+				7B26D1D62C1D88DC00BC9912 /* Stack */,
 				7B26D1BB2C1D5AEA00BC9912 /* RootFeature.swift */,
 				7B26D1BF2C1D5D6900BC9912 /* SplashPeature.swift */,
 				7B26D1CA2C1D63B500BC9912 /* HomeFeature.swift */,
@@ -113,6 +126,7 @@
 			children = (
 				7B26D1C12C1D625400BC9912 /* TapCoordinatorFeature.swift */,
 				7B26D1CE2C1D746A00BC9912 /* TabbarCoordinator.swift */,
+				7B26D1D42C1D877600BC9912 /* NavigationStackControllCoordinator.swift */,
 			);
 			path = CoordinatorsPeature;
 			sourceTree = "<group>";
@@ -121,8 +135,20 @@
 			isa = PBXGroup;
 			children = (
 				7B26D1D22C1D797600BC9912 /* HomeCoordinatorView.swift */,
+				7B26D1DF2C1D900300BC9912 /* NavigationStackCoordinatorView.swift */,
 			);
 			path = CoordinatorViews;
+			sourceTree = "<group>";
+		};
+		7B26D1D62C1D88DC00BC9912 /* Stack */ = {
+			isa = PBXGroup;
+			children = (
+				7B26D1D72C1D88E600BC9912 /* Stack1View.swift */,
+				7B26D1D92C1D88EF00BC9912 /* Stack2View.swift */,
+				7B26D1DB2C1D88F400BC9912 /* Stack3View.swift */,
+				7B26D1DD2C1D896F00BC9912 /* StackFeature.swift */,
+			);
+			path = Stack;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,16 +229,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B26D1DC2C1D88F400BC9912 /* Stack3View.swift in Sources */,
 				7B26D1C92C1D637E00BC9912 /* HomeView.swift in Sources */,
 				7B26D1CB2C1D63B500BC9912 /* HomeFeature.swift in Sources */,
 				7B26D1B82C1D5A3500BC9912 /* RootView.swift in Sources */,
+				7B26D1D52C1D877600BC9912 /* NavigationStackControllCoordinator.swift in Sources */,
 				7B26D1CD2C1D676D00BC9912 /* TCATabView.swift in Sources */,
 				7B26D1D32C1D797600BC9912 /* HomeCoordinatorView.swift in Sources */,
 				7B26D1C72C1D632200BC9912 /* ExScreens.swift in Sources */,
+				7B26D1DA2C1D88EF00BC9912 /* Stack2View.swift in Sources */,
 				7B26D1C22C1D625400BC9912 /* TapCoordinatorFeature.swift in Sources */,
 				7B26D1D12C1D765000BC9912 /* SplashsView.swift in Sources */,
+				7B26D1D82C1D88E600BC9912 /* Stack1View.swift in Sources */,
 				7B26D1BC2C1D5AEA00BC9912 /* RootFeature.swift in Sources */,
 				7B26D1CF2C1D746A00BC9912 /* TabbarCoordinator.swift in Sources */,
+				7B26D1E02C1D900300BC9912 /* NavigationStackCoordinatorView.swift in Sources */,
+				7B26D1DE2C1D896F00BC9912 /* StackFeature.swift in Sources */,
 				7B26D1A42C1D593A00BC9912 /* TCACoordinatorePracticeApp.swift in Sources */,
 				7B26D1C02C1D5D6900BC9912 /* SplashPeature.swift in Sources */,
 			);

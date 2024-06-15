@@ -51,7 +51,7 @@ struct RootFeature {
                 state.ifFirst = false
                 return .none
                 
-            case .tapAction(.homeAction(.returnFirstCatch)):
+            case .tapAction(.ifNeedRetureFirst):
                 state.ifFirst = true
                 return .none
                 

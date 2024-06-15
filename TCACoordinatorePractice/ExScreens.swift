@@ -17,3 +17,19 @@ extension HomeTapCoordinatorFeature.TapCoordinatorScreens.State: Identifiable {
     }
     
 }
+
+
+extension NavigationStackControllCoordinator.NavigationStackScreens.State: Identifiable {
+    
+    var id: UUID {
+        switch self {
+        case let .stack1(state):
+            return state.id
+        case let .stack2(state):
+            return state.id
+        case let .stack3(state):
+            return state.id
+        }
+    }
+    
+}
