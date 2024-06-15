@@ -26,6 +26,7 @@ struct HomeView: View {
                 }
                 .background(.green)
             }
+            .navigationTitle("홈뷰 였던것 !")
         }
     }
 }

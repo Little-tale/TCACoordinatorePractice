@@ -18,6 +18,7 @@ struct HomeFeature {
     
     enum Action {
         case returnFirst
+        case nextView
     }
     
     var body: some ReducerOf<Self> {

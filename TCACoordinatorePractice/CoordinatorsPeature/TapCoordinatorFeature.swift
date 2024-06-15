@@ -22,7 +22,7 @@ struct HomeTapCoordinatorFeature {
     struct State: Equatable {
         
         static let initalState = State(
-            routes: [.root(.home(HomeFeature.State()), embedInNavigationView: false)]
+            routes: [.root(.home(HomeFeature.State()), embedInNavigationView: true)]
         )
         
         var routes: IdentifiedArrayOf<Route<TapCoordinatorScreens.State>>
