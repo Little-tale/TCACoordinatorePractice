@@ -26,6 +26,9 @@ struct Stack2View: View {
             Button("첫번째 뷰로가기") {
                 store.send(.next1View)
             }
+            Button("특정 뷰로 뒤로갈꺼야! (랜덤임)") {
+                store.send(.wantTogo((Int.random(in: 1...3))))
+            }
         }
         .navigationTitle("두번쨰 스택이였던곳.")
         .navigationBarTitleDisplayMode(.large)

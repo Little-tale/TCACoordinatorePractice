@@ -113,6 +113,30 @@ struct NavigationStackControllCoordinator {
                     state.routes.goBack()
                 }
                 
+            case .router(.routeAction(id: _, action: .stack2(.wantTogo(let num)))):
+                print(num)
+//                if num == 1 {
+//                    state.routes.goBackTo(.stack1(StackFeature.State()))
+//                } else if num == 2 {
+//                    state.routes.goBackTo(.stack2(StackFeature.State()))
+//                } else if num == 3 {
+//                    state.routes.goBackTo(.stack3(StackFeature.State()))
+//                } else {
+//                    break
+//                }
+                
+                if num == 1 {
+                    return .routeWithDelaysIfUnsupported(state.routes, action: \.router, scheduler: .main) { $0.goBackTo(\.stack1) }
+                } else if num == 2 {
+                    return .routeWithDelaysIfUnsupported(state.routes, action: \.router, scheduler: .main) { $0.goBackTo(\.stack2) }
+                } else if num == 3 {
+                    return .routeWithDelaysIfUnsupported(state.routes, action: \.router, scheduler: .main) {
+                        $0.goBackTo(\.stack3)
+                    }
+                } else {
+                    break
+                }
+                
             default:
                 break
             }

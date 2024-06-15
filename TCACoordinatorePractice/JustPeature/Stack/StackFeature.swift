@@ -28,6 +28,8 @@ struct StackFeature {
         case next1View
         case goFirstStack
         case goBack
+        
+        case wantTogo(Int)
     }
     
 }
