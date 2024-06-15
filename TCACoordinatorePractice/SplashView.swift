@@ -8,6 +8,7 @@
 import SwiftUI
 import ComposableArchitecture
 
+/// 구분을 위해서 색을 주었습니다!
 struct SplashView: View {
     
     @Perception.Bindable var store: StoreOf<SplashPeature>
@@ -16,11 +17,18 @@ struct SplashView: View {
         WithPerceptionTracking {
             VStack {
                 Spacer()
-                Button(store.ButtonText) {
-                    store.send(.startButtonTapped)
-                }
+                
+                Button(action: {store.send(.startButtonTapped)}, label: {
+                    Text(store.ButtonText)
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 80)
+                        .background(.red)
+                        .padding(.horizontal, 80)
+                })
+                
                 Spacer()
             }
+            .background(.green)
         }
     }
 }

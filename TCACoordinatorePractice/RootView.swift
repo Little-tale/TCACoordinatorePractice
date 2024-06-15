@@ -20,7 +20,8 @@ struct RootView: View {
                 if store.ifFirst {
                     SplashView(store: store.scope(state: \.splashState, action: \.splashAction))
                 } else {
-                    
+                    // 이때부터는 탭바 코디네이터를 주입 해보겠습니다.
+                    TCATabView(store: store.scope(state: \.tapState, action: \.tapAction))
                 }
             }
         }

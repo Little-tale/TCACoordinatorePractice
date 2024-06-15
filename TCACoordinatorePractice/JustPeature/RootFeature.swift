@@ -7,6 +7,7 @@
 
 import Foundation
 import ComposableArchitecture
+import TCACoordinators
 
 @Reducer
 struct RootFeature {
@@ -14,12 +15,14 @@ struct RootFeature {
     @ObservableState
     struct State {
         var ifFirst: Bool = true
-        var splashState = SplashPeature.State()
+        var splashState = SplashPeature.State() // 보통은 ? 를 통해 If Let Sctore를 사용하세요
+        var tapState = TapCoordinatorFeature.State(routes: [.root((.home(HomeFeature.State())), embedInNavigationView: true)])
     }
     
     enum Action: BindableAction {
         case binding(BindingAction<State>)
         case splashAction(SplashPeature.Action)
+        case tapAction(TapCoordinatorFeature.Action)
     }
     
     var body: some ReducerOf<Self> {
@@ -30,10 +33,20 @@ struct RootFeature {
             SplashPeature()
         }
         
+        // Tap Coordinator의 store를 감시 하겠습니다.
+        Scope(state: \.tapState, action: \.tapAction) {
+            TapCoordinatorFeature()
+        }
+        
         Reduce { state, action in
             
             switch action {
                 
+                // 하위뷰의 액션을 관찰합니다.
+            case .splashAction(.startButtonTapped):
+                state.ifFirst = false
+                
+                return .none
             default :
                 break
             }
