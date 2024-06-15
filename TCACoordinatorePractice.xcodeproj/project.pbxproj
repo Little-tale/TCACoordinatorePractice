@@ -8,19 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		7B26D1A42C1D593A00BC9912 /* TCACoordinatorePracticeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B26D1A32C1D593A00BC9912 /* TCACoordinatorePracticeApp.swift */; };
-		7B26D1A62C1D593A00BC9912 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B26D1A52C1D593A00BC9912 /* ContentView.swift */; };
 		7B26D1A82C1D593B00BC9912 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B26D1A72C1D593B00BC9912 /* Assets.xcassets */; };
 		7B26D1AB2C1D593B00BC9912 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B26D1AA2C1D593B00BC9912 /* Preview Assets.xcassets */; };
 		7B26D1B32C1D599F00BC9912 /* TCACoordinators in Frameworks */ = {isa = PBXBuildFile; productRef = 7B26D1B22C1D599F00BC9912 /* TCACoordinators */; };
 		7B26D1B62C1D59B700BC9912 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 7B26D1B52C1D59B700BC9912 /* ComposableArchitecture */; };
+		7B26D1B82C1D5A3500BC9912 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B26D1B72C1D5A3500BC9912 /* RootView.swift */; };
+		7B26D1BC2C1D5AEA00BC9912 /* RootFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B26D1BB2C1D5AEA00BC9912 /* RootFeature.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7B26D1A02C1D593A00BC9912 /* TCACoordinatorePractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCACoordinatorePractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B26D1A32C1D593A00BC9912 /* TCACoordinatorePracticeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCACoordinatorePracticeApp.swift; sourceTree = "<group>"; };
-		7B26D1A52C1D593A00BC9912 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7B26D1A72C1D593B00BC9912 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B26D1AA2C1D593B00BC9912 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7B26D1B72C1D5A3500BC9912 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		7B26D1BB2C1D5AEA00BC9912 /* RootFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootFeature.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +57,10 @@
 		7B26D1A22C1D593A00BC9912 /* TCACoordinatorePractice */ = {
 			isa = PBXGroup;
 			children = (
+				7B26D1BA2C1D5ACA00BC9912 /* CoordinatorsPeature */,
+				7B26D1B92C1D5ABC00BC9912 /* JustPeature */,
+				7B26D1B72C1D5A3500BC9912 /* RootView.swift */,
 				7B26D1A32C1D593A00BC9912 /* TCACoordinatorePracticeApp.swift */,
-				7B26D1A52C1D593A00BC9912 /* ContentView.swift */,
 				7B26D1A72C1D593B00BC9912 /* Assets.xcassets */,
 				7B26D1A92C1D593B00BC9912 /* Preview Content */,
 			);
@@ -69,6 +73,21 @@
 				7B26D1AA2C1D593B00BC9912 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7B26D1B92C1D5ABC00BC9912 /* JustPeature */ = {
+			isa = PBXGroup;
+			children = (
+				7B26D1BB2C1D5AEA00BC9912 /* RootFeature.swift */,
+			);
+			path = JustPeature;
+			sourceTree = "<group>";
+		};
+		7B26D1BA2C1D5ACA00BC9912 /* CoordinatorsPeature */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CoordinatorsPeature;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,7 +168,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B26D1A62C1D593A00BC9912 /* ContentView.swift in Sources */,
+				7B26D1B82C1D5A3500BC9912 /* RootView.swift in Sources */,
+				7B26D1BC2C1D5AEA00BC9912 /* RootFeature.swift in Sources */,
 				7B26D1A42C1D593A00BC9912 /* TCACoordinatorePracticeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
