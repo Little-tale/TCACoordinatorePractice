@@ -15,8 +15,14 @@ struct RootView: View {
     }
     
     var body: some View {
-        VStack {
-            
+        WithPerceptionTracking {
+            Group {
+                if store.ifFirst {
+                    SplashView(store: store.scope(state: \.splashState, action: \.splashAction))
+                } else {
+                    
+                }
+            }
         }
     }
 }
